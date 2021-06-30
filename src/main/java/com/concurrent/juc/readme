@@ -1,0 +1,43 @@
+1.线程和进程
+    进程：一个程序，qq.exe，程序集合，在任务管理器中可观看
+    线程：一个进程包含多个线程，线程是进程的执行单元
+    java默认有两个线程：main和gc线程
+    java无法直接启动线程，通过本地方法start0()方法
+
+2.并发和并行
+    并发：多个线程操作一个资源，单核CPU下，通过快速交替线程执行。
+    并行：多核CPU下，多个线程同时执行。
+    并发编程：充分利用cpu的资源
+
+3.线程状态 Thread.State枚举
+    1.NEW  新生
+    2.RUNNABLE 可运行
+    3.BLOCKED 阻塞
+    4.WAITING 等待
+    5.TIMED_WAITING  超时等待
+    5.TERMINATED  终止
+
+4.wait/sleep区别
+    1.来源不同：wait是Object类，sleep是Thread
+    2.wait会释放锁，sleep不会释放锁
+    3.使用范围不同：wait必须在synchronized中使用，sleep可以在任何地方执行
+
+5.synchronized和Lock区别
+    1.synchronized是java关键字，可修饰方法，代码块;Lock是java类
+    2.synchronized无法判断获取锁的状态，Lock可以判断是否获取锁
+    3.synchronized自动释放锁，Lock需要手动释放,如果不释放锁就出现死锁
+    4.synchronized 线程1（获得锁） 线程2（阻塞），Lock不一定一直等待下去   lock.tryLock( long, unit)
+    5.synchronized可重入，不可以中断的，非公平，Lock可重入，可以判断锁，非公平可以手动设置
+    6.synchronized适合锁少量的代码同步问题，Lock适合锁大量的同步
+
+6.虚假唤醒
+    像在一个参数版本中，中断和虚假唤醒是可能的，并且该方法应该始终在循环中使用：
+      synchronized (obj) {
+             while (<condition does not hold>)
+                 obj.wait();
+             ... // Perform action appropriate to condition
+         }
+
+7.8锁现象
+
+
