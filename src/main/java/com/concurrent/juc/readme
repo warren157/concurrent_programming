@@ -40,4 +40,11 @@
 
 7.8锁现象
 
+8.callable
+    1.可以有返回值
+    2.可以抛出异常
+    3.方法不同，call()
 
+9.CountDownLatch
+    1.countDown() 数量减一
+    2.await() 等待计数器为0，await()会被唤醒，继续执行
