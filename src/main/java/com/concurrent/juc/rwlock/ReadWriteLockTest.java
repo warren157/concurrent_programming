@@ -9,7 +9,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  * @author rui.wang
  * @version 1.0
- * @description: TODO
+ * @description:
  * @date 2021/6/30 16:39
  */
 public class ReadWriteLockTest {

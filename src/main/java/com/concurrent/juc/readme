@@ -48,3 +48,7 @@
 9.CountDownLatch
     1.countDown() 数量减一
     2.await() 等待计数器为0，await()会被唤醒，继续执行
+
+10.阻塞队列
+
+11.同步队列
