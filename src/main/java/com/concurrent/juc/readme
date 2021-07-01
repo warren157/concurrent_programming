@@ -52,3 +52,13 @@
 10.阻塞队列
 
 11.同步队列
+
+12.线程池
+    public ThreadPoolExecutor(int corePoolSize,  // 核心线程数
+                                  int maximumPoolSize, //最大核心线程数
+                                  long keepAliveTime, //存活时间
+                                  TimeUnit unit,    //时间单位
+                                  BlockingQueue<Runnable> workQueue,//存放任务队列,
+                                  ThreadFactory threadFactory,//线程工厂
+                                   RejectedExecutionHandler handler //拒绝策略
+                                   ) {
