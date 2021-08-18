@@ -62,3 +62,6 @@
                                   ThreadFactory threadFactory,//线程工厂
                                    RejectedExecutionHandler handler //拒绝策略
                                    ) {
+13.ForkJoin
+    1.java1.7后添加的新特性，并行执行任务，提高效率，大数据量
+    2.特点：工作窃取
