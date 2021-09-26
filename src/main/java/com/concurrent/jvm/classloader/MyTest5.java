@@ -1,5 +1,7 @@
 package com.concurrent.jvm.classloader;
 
+import java.util.Random;
+
 /**
  * @author rui.wang
  * @version 1.0
@@ -14,8 +16,12 @@ public class MyTest5 {
     }
 }
 interface MyParent5 {
-    static int a = 5;
+    static int a = new Random().nextInt(6);
 }
 interface MyChild5 extends MyParent5 {
+    static int b = 6;
+}
+
+class MyChild_5 implements MyParent5 {
     static int b = 6;
 }
